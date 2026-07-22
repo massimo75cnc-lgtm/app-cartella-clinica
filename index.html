@@ -1128,7 +1128,7 @@ window.auth = auth;
 
   window.loginFirebase = async function(email, password){
     try {
-      const result = await signInWithEmailAndPassword(auth, email, password);
+     const result = await signInWithEmailAndPassword(window.auth, email, password);
       console.log("Login riuscito:", result.user.email);
       alert("Accesso confermato ✓");
       renderHeaderActions();
