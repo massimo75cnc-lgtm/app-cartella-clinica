@@ -1095,8 +1095,24 @@ function setupAutoHideBars(){
 })();
 </script>
 <script type="module">
-  console.log("Firebase collegato");
-</script>  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCeNbtJ1hg4-heqzyFaQW0ry9jhxfulws0",
+    authDomain: "app-cartella-clinica.firebaseapp.com",
+    projectId: "app-cartella-clinica",
+    storageBucket: "app-cartella-clinica.firebasestorage.app",
+    messagingSenderId: "214351246140",
+    appId: "1:214351246140:web:d888bf7bd0d6e5da47a439",
+    measurementId: "G-0NZRRJBKKB"
+  };
+
+  const firebaseApp = initializeApp(firebaseConfig);
+  const auth = getAuth(firebaseApp);
+
+  console.log("Firebase attivo ✓");
+</script>
 </body>
   
 </html>
