@@ -193,7 +193,17 @@
 </style>
 </head>
 <body>
-
+<div id="loginBox" style="max-width:400px;margin:80px auto;text-align:center;">
+  <h2>Accesso Cartella Clinica</h2>
+  <input id="loginEmail" placeholder="Email" style="display:block;width:100%;margin:10px;padding:10px;">
+  <input id="loginPassword" type="password" placeholder="Password" style="display:block;width:100%;margin:10px;padding:10px;">
+  <button onclick="loginFirebase(
+    document.getElementById('loginEmail').value,
+    document.getElementById('loginPassword').value
+  )">
+    Entra
+  </button>
+</div>
 <header>
   <h1>La Mia <span>Cartella Clinica</span></h1>
   <div class="header-actions" id="headerActions"></div>
