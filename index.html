@@ -1131,6 +1131,7 @@ window.auth = auth;
      const result = await signInWithEmailAndPassword(window.auth, email, password);
       console.log("Login riuscito:", result.user.email);
       alert("Accesso confermato ✓");
+      document.getElementById("loginBox").style.display="none";
       renderHeaderActions();
 renderHome();
     } catch(error) {
