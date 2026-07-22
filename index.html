@@ -1133,6 +1133,7 @@ window.auth = auth;
 
   window.loginFirebase = async function(email, password){
     try {
+      await setPersistence(window.auth, browserLocalPersistence);
      const result = await signInWithEmailAndPassword(window.auth, email, password);
       console.log("Login riuscito:", result.user.email);
       alert("Accesso confermato ✓");
