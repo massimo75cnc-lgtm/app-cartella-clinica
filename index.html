@@ -1113,6 +1113,23 @@ function setupAutoHideBars(){
 
   console.log("Firebase attivo ✓");
 </script>
+<script type="module">
+  import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  window.loginFirebase = async function(email, password){
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      console.log("Login riuscito:", result.user.email);
+      alert("Accesso confermato ✓");
+    } catch(error) {
+      console.log(error);
+      alert("Email o password errati");
+    }
+  };
+</script>
+
 </body>
-  
+
 </html>
+  
+
