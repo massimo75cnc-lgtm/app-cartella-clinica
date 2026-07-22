@@ -566,6 +566,10 @@ function renderBreadcrumb(container){
 
 /* ============ VISTA: HOME (mappa a nodi) ============ */
 async function renderHome(){
+  if(!window.auth){
+  alert("Accesso richiesto");
+  return;
+}
   const app = document.getElementById('app');
   app.innerHTML = '';
   removeBottomBar();
