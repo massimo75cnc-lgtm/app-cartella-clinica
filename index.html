@@ -1131,6 +1131,8 @@ function setupAutoHideBars(){
       const result = await signInWithEmailAndPassword(auth, email, password);
       console.log("Login riuscito:", result.user.email);
       alert("Accesso confermato ✓");
+      renderHeaderActions();
+renderHome();
     } catch(error) {
       console.log(error);
       alert("Email o password errati");
