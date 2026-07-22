@@ -1120,7 +1120,7 @@ function setupAutoHideBars(){
 
   const firebaseApp = initializeApp(firebaseConfig);
   const auth = getAuth(firebaseApp);
-
+window.auth = auth;
   console.log("Firebase attivo ✓");
 </script>
 <script type="module">
