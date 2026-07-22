@@ -1129,7 +1129,11 @@ window.auth = auth;
   console.log("Firebase attivo ✓");
 </script>
 <script type="module">
-  import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+ import { 
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserLocalPersistence
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
   window.loginFirebase = async function(email, password){
     try {
